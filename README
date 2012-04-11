@@ -6,10 +6,10 @@ User manual
 
 motivation:
 
-    This package was written for the purpose of viewing game records of the
+    This package is written for the purpose of viewing game records of the
     game 'go', also known as weiqi or baduk, on an e-reader that can read 
-    .cbz, a comic book format. It computes all boardpositions from an sgf-file,
-    converts them to grayscale images, and stores them in a .cbz file. 
+    cbz, a comic book format. It computes all boardpositions from an sgf file,
+    converts them to grayscale images, and stores them in a cbz file. 
     
 requirements:
 
@@ -25,11 +25,11 @@ usage:
         
 discussion:
        
-    There is currently no support for game info. Rename a copy
-    of the .sgf file to .txt and copy it together with the .cbz file. 
+    There is currently no support for game info. Make a copy of the sgf file,
+    change the filetype to .txt and copy it together with the cbz file. 
       
     It is possible to use other resolutions than 600x800 or rotate or mirror
-    the goboard, by editing function 'main' in cbz2sgf.py.
+    the goboard, by editing function 'main' in sgf2cbz.py.
     
 todo:
 
@@ -41,7 +41,7 @@ List of files
 
 sgfparser.py:
 
-    This module implements a very basic sgfparser: '.sgf' is a format which is
+    This module implements a very basic sgfparser: sgf is a format which is
     popular for storing game records, in this case for the board game 'go'. It 
     extracts only the moves in the main variation, it ignores handicap stones
     and comments. 
@@ -59,8 +59,8 @@ transformer.py:
     
 sgf2cbz.py:
 
-    This module takes an .sgf file, creates a series of 'PNG' images from it, 
-    and stores them in a zip file. The file's extension is .cbz instead of zip, in
+    This module takes an sgf file, creates a series of PNG images from it, 
+    and stores them in a zip file. The file's extension is cbz instead of zip, in
     order to be able to display the file using an e-reader's comic book reader.
     
 test13x13.sgf:
